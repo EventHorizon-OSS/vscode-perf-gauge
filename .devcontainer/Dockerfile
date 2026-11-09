@@ -14,7 +14,7 @@ COPY --from=uv /uv /uvx /bin/
 ENV PATH="/root/.local/bin:${PATH}"
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends ca-certificates curl git gnupg \
+    && apt-get install -y --no-install-recommends ca-certificates curl git gnupg openssh-client \
     && install -d -m 0755 /etc/apt/keyrings \
     && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key \
         | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg \
