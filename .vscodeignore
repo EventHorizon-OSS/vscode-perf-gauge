@@ -1,0 +1,7 @@
+.vscode/**
+.vscode-test/**
+tests_unit/**
+tests_integration/**
+src/**
+tsconfig.json
+.gitignore

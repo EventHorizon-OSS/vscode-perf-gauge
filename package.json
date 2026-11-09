@@ -1,0 +1,44 @@
+{
+  "name": "vscode-perf-gauge",
+  "displayName": "VS Code Performance Gauge",
+  "description": "A starter project for Visual Studio Code performance tools.",
+  "version": "0.0.1",
+  "publisher": "eventhorizon-oss",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "performance",
+    "gauge"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onCommand:vscode-perf-gauge.showGauge"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-perf-gauge.showGauge",
+        "title": "Show Performance Gauge"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "node --test tests_unit",
+    "test:integration": "npm run compile && node ./tests_integration/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "@types/vscode": "^1.90.0",
+    "@vscode/test-electron": "^2.4.1",
+    "typescript": "^5.8.3"
+  }
+}

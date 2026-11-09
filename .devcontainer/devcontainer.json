@@ -9,6 +9,7 @@
   },
   "mounts": [
     "source=${devcontainerId}-vscode-user,target=/root/.vscode-server/data/User,type=volume",
+    "source=${devcontainerId}-vscode-agent-sessions,target=/root/.vscode-server/data/agentSessionData,type=volume",
     "source=${devcontainerId}-copilot,target=/root/.copilot,type=volume"
   ]
 }
